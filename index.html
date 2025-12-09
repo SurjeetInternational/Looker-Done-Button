@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      button {
+        background: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #43a047;
+      }
+      #wrap { padding: 10px; }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap"></div>
+
+    <script>
+      const dscc = window.dscc;
+
+      function drawViz(data) {
+        const row = data.tables.DEFAULT[0];
+        if (!row) return;
+
+        const url = row["Link"];   // YOUR LINK FIELD
+        const task = row["Task Name"];
+
+        document.getElementById("wrap").innerHTML = `
+          <button onclick="window.open('${url}', '_blank')">
+            ✔ Done
+          </button>
+        `;
+      }
+
+      dscc.subscribeToData(drawViz, { transform: dscc.tableTransform });
+    </script>
+  </body>
+</html>
