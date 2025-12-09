@@ -1,0 +1,17 @@
+{
+  "name": "Done Button",
+  "description": "Shows a Done button to submit task completion.",
+  "organization": "Your Company",
+  "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/240px-Yes_Check_Circle.svg.png",
+  "supportUrl": "https://support.google.com",
+  "devMode": true,
+
+  "components": {
+    "doneButton": {
+      "name": "Task Done Button",
+      "description": "Click to mark a task completed using Apps Script.",
+      "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/240px-Yes_Check_Circle.svg.png",
+      "resource": "index.html"
+    }
+  }
+}
