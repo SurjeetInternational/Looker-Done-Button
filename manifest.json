@@ -1,16 +1,18 @@
 {
+  "schemaVersion": 1,
   "name": "Done Button Viz",
   "description": "Shows a Done button to submit task completion.",
   "organization": "Surjeet International",
-  "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/240px-Yes_Check_Circle.svg.png",
   "supportUrl": "https://support.google.com",
+  "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/240px-Yes_Check_Circle.svg.png",
   "devMode": true,
 
-  "visualization": {
-    "id": "done_button",
-    "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/240px-Yes_Check_Circle.svg.png",
-    "resource": "index.html",
-    "name": "Done Button",
-    "description": "Button to complete tasks in CRM FMS."
+  "components": {
+    "done_button": {
+      "name": "Done Button",
+      "description": "Button to complete tasks in CRM FMS.",
+      "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/240px-Yes_Check_Circle.svg.png",
+      "resource": "index.html"
+    }
   }
 }
