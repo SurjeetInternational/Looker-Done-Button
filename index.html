@@ -1,6 +1,52 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://public-dot-datastudio-sdk-prod.appspot.com/viz-library/viz-lib.min.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+      }
+      button {
+        background: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #43a047;
+      }
+    </style>
+  </head>
+
   <body>
-    <h1>Hello from GitHub Pages</h1>
+    <div id="container">Loading…</div>
+
+    <script>
+      const dscc = window.dscc;
+
+      function render(data) {
+        const row = data.tables.DEFAULT[0];
+        if (!row) {
+          document.getElementById("container").innerText = "No data";
+          return;
+        }
+
+        const url = row["Link"]; // MUST MATCH FIELD NAME IN LOOKER STUDIO!
+
+        document.getElementById("container").innerHTML = `
+          <button onclick="window.open('${url}', '_blank')">
+            ✔ Done
+          </button>
+        `;
+      }
+
+      dscc.subscribeToData(render, { transform: dscc.tableTransform });
+    </script>
   </body>
 </html>
