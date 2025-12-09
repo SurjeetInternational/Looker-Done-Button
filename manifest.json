@@ -1,17 +1,16 @@
 {
-  "name": "Done Button",
+  "name": "Done Button Viz",
   "description": "Shows a Done button to submit task completion.",
-  "organization": "Your Company",
+  "organization": "Surjeet International",
   "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/240px-Yes_Check_Circle.svg.png",
   "supportUrl": "https://support.google.com",
   "devMode": true,
 
-  "components": {
-    "doneButton": {
-      "name": "Task Done Button",
-      "description": "Click to mark a task completed using Apps Script.",
-      "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/240px-Yes_Check_Circle.svg.png",
-      "resource": "index.html"
-    }
+  "visualization": {
+    "id": "done_button",
+    "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/240px-Yes_Check_Circle.svg.png",
+    "resource": "index.html",
+    "name": "Done Button",
+    "description": "Button to complete tasks in CRM FMS."
   }
 }
